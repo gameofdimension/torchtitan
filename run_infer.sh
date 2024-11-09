@@ -7,16 +7,9 @@
 
 set -ex
 
-if [ -f venv/bin/activate ]; then
-    source venv/bin/activate
-elif [ -d /apps/dat/cv/felixyu/venv_torchtitan ]; then
-    cp -r /apps/dat/cv/felixyu/venv_torchtitan ./venv
-    source venv/bin/activate
-else
-    echo "No venv found"
-    exit -1
-fi
-pip install wandb -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+# python -m venv venv
+# source venv/bin/activate
+pip install -r requirements.txt #  -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 
 # use envs as local overrides for convenience
 # e.g.
